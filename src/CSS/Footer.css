@@ -1,0 +1,13 @@
+
+.footer{
+    font-size: 1.4rem;
+    color: white;
+    font-weight: 700;
+    backdrop-filter: blur(75px);
+    text-align: center;
+    padding-top: 1.3rem;
+    padding-bottom: 1.3rem;
+}
+.footer__link{
+    color: #64fcd9;
+}

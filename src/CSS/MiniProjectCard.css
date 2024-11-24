@@ -1,0 +1,96 @@
+/* Container for the cards */
+.mini-project-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* Mini project card */
+.mini-project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #121212;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(32, 2, 61, 0.9);
+  transition: transform 0.3s ease-in-out;
+}
+
+.mini-project-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Image styling */
+.mini-project-card-image {
+  width: 100%;
+  border-radius: 0.75rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.mini-project-card-image:hover {
+  transform: scale(1.05);
+}
+
+/* Title */
+.mini-project-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 0.75rem 0 0.5rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* Description */
+.mini-project-description {
+  color: #cccccc;
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+/* Tools */
+.mini-project-tools {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Links container */
+.mini-project-links {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.mini-project-links img {
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out; /* Smooth transition */
+}
+
+.mini-project-links img:hover {
+  filter: brightness(3.3); /* Increase brightness by 30% for a whiter effect */
+}
+
+/* Icons */
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .mini-project-container {
+    gap: 1.5rem;
+  }
+
+  .mini-project-card {
+    padding: 1.25rem;
+  }
+
+  .mini-project-title {
+    font-size: 1.25rem;
+  }
+
+  .mini-project-description {
+    font-size: 1rem;
+  }
+}

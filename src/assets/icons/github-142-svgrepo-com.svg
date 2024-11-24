@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="90" height="20" role="img" aria-label="GitHub">
+  <title>GitHub</title>
+  <linearGradient id="s" x2="0" y2="100%">
+    <stop offset="0" stop-color="#bbb" stop-opacity=".1"/>
+    <stop offset="1" stop-opacity=".1"/>
+  </linearGradient>
+  <clipPath id="r">
+    <rect width="90" height="20" rx="3" fill="#fff"/>
+  </clipPath>
+  <g clip-path="url(#r)">
+    <rect width="0" height="20" fill="#555"/>
+    <rect x="0" width="90" height="20" fill="#000"/>
+    <rect width="90" height="20" fill="url(#s)"/>
+  </g>
+  <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="110">
+    <!-- GitHub Logo -->
+    <svg x="5" y="3" width="14" height="14" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+      <path fill="#fff" d="M10,0.296C4.478,0.296,0,4.89,0,10.57c0,4.504,2.865,8.333,6.839,9.68c0.5,0.09,0.683-0.219,0.683-0.487 c0-0.239-0.008-0.871-0.013-1.71c-2.782,0.612-3.37-1.372-3.37-1.372c-0.454-1.162-1.109-1.47-1.109-1.47 c-0.906-0.62,0.068-0.608,0.068-0.608c1.002,0.075,1.529,1.068,1.529,1.068c0.89,1.543,2.337,1.097,2.906,0.839 c0.091-0.664,0.349-1.097,0.635-1.35c-2.22-0.253-4.555-1.127-4.555-5.02c0-1.109,0.39-2.016,1.029-2.727 c-0.103-0.253-0.447-1.27,0.098-2.646c0,0,0.84-0.276,2.75,1.025c0.798-0.226,1.654-0.339,2.505-0.343 c0.85,0.004,1.708,0.117,2.505,0.343c1.91-1.302,2.75-1.025,2.75-1.025c0.545,1.376,0.201,2.393,0.098,2.646 c0.64,0.711,1.027,1.618,1.027,2.727c0,3.903-2.338,4.765-4.565,5.012c0.36,0.313,0.681,0.936,0.681,1.885 c0,1.361-0.012,2.459-0.012,2.789c0,0.27,0.18,0.581,0.688,0.482C17.137,18.897,20,15.07,20,10.57 C20,4.89,15.522,0.296,10,0.296z"/>
+    </svg>
+    <!-- "GitHub" Text -->
+    <text x="60" y="14" fill="#fff" font-size="10">GitHub</text>
+  </g>
+</svg>

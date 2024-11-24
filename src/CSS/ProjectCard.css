@@ -1,0 +1,135 @@
+.project-card {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  background-color: #121212;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(32, 2, 61, 0.9); /* Add subtle shadow for depth */
+  width: 100%; /* Ensure card is responsive */
+  height: 400px; /* Set a fixed height for the card */
+}
+
+.project-card-left {
+  flex-direction: row-reverse; /* Reverse content for left-aligned cards */
+}
+
+.project-card-right {
+  flex-direction: row; /* Default for right-aligned cards */
+}
+
+.project-card-content {
+  padding: 1.5rem; /* Slightly increase padding for better spacing */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Adjust content spacing */
+  flex: 1; /* Allow content to take available space */
+}
+
+.project-card-links {
+  display: flex;
+  gap: 1.5rem; /* Increase space between icons */
+  justify-content: flex-end;
+  margin-top: 1rem; /* Add spacing above links */
+}
+
+.project-card-links img {
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out; /* Smooth transition */
+}
+
+.project-card-links img:hover {
+  filter: brightness(3.3); /* Increase brightness by 30% for a whiter effect */
+}
+
+.project-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #cccccc;
+}
+
+.project-description {
+  margin-bottom: 1rem;
+  color: #cccccc;
+  line-height: 1.6; /* Improve readability */
+}
+
+.project-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.project-card-image {
+  width: 100%;
+  height: 100%; /* Ensure the image takes full height */
+  object-fit: cover; /* Ensure images scale correctly */
+  transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+.project-card-image:hover {
+  transform: scale(1.05); /* Zoom effect on hover */
+}
+
+/* Media Query for Medium Screens and larger */
+@media (min-width: 768px) {
+  .project-card {
+    flex-direction: row; /* Row layout for medium+ screens */
+    height: 350px; /* Slightly smaller fixed height */
+  }
+
+  .project-card-content {
+    flex: 1; /* Ensure content takes available space */
+  }
+
+  .project-card-image {
+    flex: 0.5; /* Ensure image takes half of the card space */
+    height: 100%; /* Maintain height */
+  }
+}
+
+/* Media Query for Larger Screens */
+@media (min-width: 1024px) {
+  .project-card {
+    flex-direction: row; /* Row layout for larger screens */
+    height: 400px; /* Adjust height for larger screens */
+  }
+
+  .project-card-content {
+    padding: 2rem; /* Increase padding for better spacing */
+  }
+
+  .project-card-image {
+    flex: 0.4; /* Take 40% of the card width */
+  }
+}
+
+/* Media Query for Smaller Screens (max-width: 768px) */
+@media (max-width: 767px) {
+  .project-card {
+    flex-direction: column; /* Stack content vertically */
+    height: auto; /* Allow card height to adjust based on content */
+    padding: 1rem; /* Reduce padding for better use of space */
+  }
+
+  .project-card-content {
+    padding: 1rem; /* Reduce content padding */
+  }
+
+  .project-card-links {
+    gap: 1rem; /* Reduce gap between icons */
+  }
+
+  .project-card-image {
+    width: 100%; /* Image takes full width */
+    height: auto; /* Allow height to adjust based on the image aspect ratio */
+  }
+
+  .project-subtitle {
+    font-size: 1rem; /* Adjust font size */
+  }
+
+  .project-description {
+    font-size: 0.9rem; /* Adjust font size */
+  }
+}

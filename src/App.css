@@ -1,0 +1,373 @@
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+
+
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*
+ * ==================
+ * Start Here
+ * ==================
+ */
+
+.container {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+.section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 7rem;
+}
+.section:last-of-type{
+    margin-bottom: 0;
+}
+.section__title{
+    font-weight: 800;
+    font-size: 5rem;
+    position: relative;
+}
+.section__title::before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 125%;
+    transform: translateX(-50%);
+    border-bottom: 3px dashed #00FF94;
+}
+
+
+
+
+
+
+
+@media only screen and (min-width: 36em) {
+  .container {
+      max-width: 540px;
+  }
+
+  /* Header */
+  .header__right{
+      display: block;
+      opacity: 0.3;
+  }
+  .header__title{
+      flex-direction: row;
+  }
+  .header__title-1{
+      margin-right: 1.5rem;
+  }
+
+  /* Navbar */
+  .nav__list{
+      height: unset;
+      flex-direction: row;
+      justify-content: flex-end;
+      overflow-y: unset;
+  }
+  .nav__list-item{
+      margin-bottom: 0;
+      margin-right: 2rem;
+  }
+  .nav__list-item:last-of-type{
+      margin-right: 0;
+  }
+  .nav__list-link{
+      font-size: 1.3rem;
+  }
+  .nav__hamburger-btn{
+      display: none;
+  }
+
+  /* Works */
+  .work{
+      width: 50%;
+  }
+}
+
+/*
+* ========================
+* Medium Screen -- 768px
+* ========================
+*/
+@media only screen and (min-width: 48em) {
+  .container {
+      max-width: 760px;
+  }
+  .service-cards{
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 100%;
+  }
+  .service-card__box{
+      width: 28%;
+      max-width: 350px;
+  }
+  .service-card__illustration{
+      width: 100%;
+      max-width: 150px;
+      height: 150px;
+  }
+}
+
+/*
+* ========================
+* Large Screen -- 992px
+* ========================
+*/
+@media only screen and (min-width: 62em) {
+  .container {
+      max-width: 960px;
+  }
+  .section__title{
+      font-size: 8rem;
+  }
+  .work{
+      width: 33.33333333333333%;
+  }
+  .contact__form{
+      width: 40%;
+      margin-left: unset;
+  }
+  .contact__illustration{
+      width: 60%;
+      display: flex;
+      max-width: 450px;
+      margin-left: auto;
+      margin-right: auto;
+  }
+}
+
+/*
+* ======================================
+* Large Screen Extended -- 1000px
+* ======================================
+*/
+@media only screen and (min-width: 62.5em) {
+  .header__right{
+      width: 500px;
+      opacity: 1;
+      top: 35px;
+  }
+}
+
+/*
+* ========================
+* XLarge Screen -- 1200px
+* ========================
+*/
+@media only screen and (min-width: 75em) {
+  .container {
+      max-width: 1140px;
+  }
+  .header__title{
+      font-size: 8rem;
+  }
+  .section{
+      margin-bottom: 13rem;
+  }
+}
+
+/*
+* ========================
+* XXLarge Screen -- 1400px
+* ========================
+*/
+@media only screen and (min-width: 87.5em) {
+  .container {
+      max-width: 1320px;
+  }
+}
+
+
+/*
+*
+* Animations
+*
+*/
+@keyframes distort-1{
+  0% {
+      clip: rect(57px, 9999px, 46px, 0);
+  }
+  5% {
+      clip: rect(15px, 9999px, 56px, 0);
+  }
+  10% {
+      clip: rect(6px, 9999px, 70px, 0);
+  }
+  15% {
+      clip: rect(40px, 9999px, 80px, 0);
+  }
+  20% {
+      clip: rect(32px, 9999px, 44px, 0);
+  }
+  25% {
+      clip: rect(65px, 9999px, 85px, 0);
+  }
+  30% {
+      clip: rect(27px, 9999px, 78px, 0);
+  }
+  35% {
+      clip: rect(59px, 9999px, 93px, 0);
+  }
+  40% {
+      clip: rect(44px, 9999px, 77px, 0);
+  }
+  45% {
+      clip: rect(74px, 9999px, 10px, 0);
+  }
+  50% {
+      clip: rect(73px, 9999px, 42px, 0);
+  }
+  55% {
+      clip: rect(32px, 9999px, 58px, 0);
+  }
+  60% {
+      clip: rect(21px, 9999px, 54px, 0);
+  }
+  65% {
+      clip: rect(71px, 9999px, 11px, 0);
+  }
+  70% {
+      clip: rect(85px, 9999px, 25px, 0);
+  }
+  75% {
+      clip: rect(83px, 9999px, 77px, 0);
+  }
+  80% {
+      clip: rect(62px, 9999px, 52px, 0);
+  }
+  85% {
+      clip: rect(68px, 9999px, 84px, 0);
+  }
+  90% {
+      clip: rect(37px, 9999px, 20px, 0);
+  }
+  95% {
+      clip: rect(10px, 9999px, 15px, 0);
+  }
+  100% {
+      clip: rect(83px, 9999px, 28px, 0);
+  }
+}
+@keyframes distort-2 {
+  0% {
+      clip: rect(20px, 9999px, 96px, 0);
+  }
+  5% {
+      clip: rect(62px, 9999px, 2px, 0);
+  }
+  10% {
+      clip: rect(63px, 9999px, 39px, 0);
+  }
+  15% {
+      clip: rect(92px, 9999px, 75px, 0);
+  }
+  20% {
+      clip: rect(54px, 9999px, 2px, 0);
+  }
+  25% {
+      clip: rect(22px, 9999px, 96px, 0);
+  }
+  30% {
+      clip: rect(39px, 9999px, 98px, 0);
+  }
+  35% {
+      clip: rect(49px, 9999px, 37px, 0);
+  }
+  40% {
+      clip: rect(90px, 9999px, 17px, 0);
+  }
+  45% {
+      clip: rect(36px, 9999px, 57px, 0);
+  }
+  50% {
+      clip: rect(92px, 9999px, 78px, 0);
+  }
+  55% {
+      clip: rect(97px, 9999px, 65px, 0);
+  }
+  60% {
+      clip: rect(69px, 9999px, 30px, 0);
+  }
+  65% {
+      clip: rect(92px, 9999px, 13px, 0);
+  }
+  70% {
+      clip: rect(74px, 9999px, 76px, 0);
+  }
+  75% {
+      clip: rect(2px, 9999px, 45px, 0);
+  }
+  80% {
+      clip: rect(30px, 9999px, 21px, 0);
+  }
+  85% {
+      clip: rect(58px, 9999px, 34px, 0);
+  }
+  90% {
+      clip: rect(79px, 9999px, 27px, 0);
+  }
+  95% {
+      clip: rect(32px, 9999px, 1px, 0);
+  }
+  100% {
+      clip: rect(87px, 9999px, 63px, 0);
+  }
+}

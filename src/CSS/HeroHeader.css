@@ -1,0 +1,179 @@
+/* heroheader.css */
+
+/* Hero header container with shadow on top */
+.hero-header {
+    position: relative;
+    overflow: hidden;
+    padding-top: 6rem; /* Adjust padding to move down */
+    
+    z-index: 1; /* Ensure shadow is on top */
+}
+
+/* Container for the hero section */
+.header__container {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-wrap: wrap; /* Allow elements to wrap on smaller screens */
+}
+
+/* Background overlay in the hero section */
+.header__bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 350px; /* Controls the size of the background */
+    background: linear-gradient(to top, #111, #1110);
+    z-index: -1;
+}
+
+/* Left content container */
+.header__left {
+    width: 100%;
+    max-width: 900px;
+    margin-top: 80px; /* Move text and button lower */
+}
+
+/* Right content container (SVG image or background) */
+.header__right {
+    position: absolute;
+   
+    top: 0;
+    
+    margin-top: -100px;
+    max-width: 900px; /* Increase max-width for larger SVG */
+    max-height: 100vh; /* Ensure SVG takes up a larger portion of the screen */
+    overflow: hidden;
+    /* Increase height to make the SVG bigger */
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    display: none;
+}
+
+/* Image in the right section, setting it as a background */
+.header__right img {
+    width: 100%;
+    object-fit: contain; /* Ensures the SVG scales properly */
+    
+}
+
+/* Hero Text Styles */
+.header__sup-text {
+    font-weight: 600;
+    font-size: 1.5rem; /* Slightly larger font size for the sup text */
+}
+
+.header__title {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 6rem; /* Increase the font size of the main title */
+    line-height: 1.2; /* Adjust line height for readability */
+    display: flex;
+    flex-direction: column;
+}
+
+.header__title-1,
+.header__title-2 {
+    display: block;
+    position: relative;
+}
+
+/* Distort text effect */
+.header__title-1::before,
+.header__title-1::after,
+.header__title-2::before,
+.header__title-2::after {
+    content: attr(data-role);
+    position: absolute;
+    left: 2px;
+    top: 0;
+    color: white;
+    background: #111111;
+    overflow: hidden;
+    clip: rect(0, 900px, 0, 0);
+}
+
+.header__title-1::before,
+.header__title-2::before {
+    text-shadow: -5px 0 #59FFB9;
+    animation: distort-1 2s infinite linear alternate-reverse;
+}
+
+.header__title-1::after,
+.header__title-2::after {
+    text-shadow: -5px 0 #7218FA;
+    animation: distort-2 2s infinite linear alternate-reverse;
+}
+
+.header__msg {
+    font-weight: 300;
+    font-size: 1.8rem; /* Slightly bigger message text */
+    margin-top: 2rem; /* Move message down slightly */
+    line-height: 1.8;
+}
+
+/* Button with always glowing effect */
+.header__resume {
+    display: inline-flex;
+    border-radius: 7px;
+    text-decoration: none;
+    background-color: #37AE7C;
+    padding: 1.5rem 1.8rem; /* Increased padding for larger button */
+    font-weight: 700;
+    color: white;
+    margin-top: 3rem; /* Move button a bit lower */
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 25px 5px rgba(55, 174, 124, 0.8); /* Always glowing effect */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Reduce the glow when hovering */
+.header__resume:hover {
+    box-shadow: 0 0 15px 3px rgba(55, 174, 124, 0.4); /* Reduced glow on hover */
+}
+
+.header__resume:hover::before {
+    width: 80%;
+    height: 80%;
+}
+
+.header__resume::before {
+    content: '';
+    background-color: #00FF94;
+    width: 120%;
+    height: 120%;
+    display: block;
+    position: absolute;
+    transition: all .15s ease-in-out;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    filter: blur(30px);
+    transform: translate(-50%, -50%);
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .header__right {
+        display: none; /* Hide the SVG on smaller screens */
+    }
+
+    /* Background image of SVG if desired on smaller screens */
+    
+    /* Adjust button size and spacing for smaller screens */
+    .header__resume {
+        padding: 1rem 1.5rem; /* Adjust padding for smaller screens */
+        font-size: 1.3rem; /* Adjust button text size */
+    }
+
+    .header__title {
+        font-size: 4rem; /* Adjust font size of the title for smaller screens */
+    }
+}
+
+
+

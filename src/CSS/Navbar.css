@@ -1,0 +1,94 @@
+/* Navigation Styles */
+.nav {
+  padding-top: 1.5rem; /* Reduced padding */
+  padding-bottom: 1.5rem; /* Reduced padding */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  backdrop-filter: blur(15px); /* Reduced blur intensity */
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: row; /* Always row layout for larger screens */
+  justify-content: center;
+  height: auto; /* Always visible */
+  overflow-y: scroll;
+  scrollbar-width: thin; /* Firefox scrollbar */
+}
+
+/* Scrollbar Styling */
+.nav__list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.nav__list::-webkit-scrollbar-thumb {
+  background: #688277;
+  border-radius: 4px;
+}
+
+.nav__list-item {
+  text-align: center;
+  margin-right: 1.5rem; /* Reduced space between items */
+}
+
+.nav__list-link {
+  color: #688277;
+  position: relative;
+  font-weight: 800;
+  text-decoration: none;
+  outline: none;
+  font-size: 1.8rem; /* Reduced font size for smaller icons */
+}
+
+.nav__list-link i {
+  font-size: 1.8rem; /* Ensures the icon inside the link is also smaller */
+}
+
+.nav__list-link::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 3px;
+  border-radius: 99rem;
+  background-color: #59FFB9;
+  position: absolute;
+  bottom: -10px; /* Adjusted spacing for smaller icons */
+  left: 0;
+  transform-origin: center;
+  transform: scaleX(0);
+  transition: transform 0.15s ease-in-out;
+}
+
+.nav__list-link:focus,
+.nav__list-link:hover {
+  color: #59FFB9;
+}
+
+.nav__list-link:focus::before,
+.nav__list-link:hover::before {
+  transform: scaleX(1);
+}
+
+.nav__list-link.active {
+  color: #59FFB9;
+}
+
+.nav__list-link.active:focus {
+  color: #93ffd0;
+}
+
+.nav__list-link.active:focus::before,
+.nav__list-link.active::before {
+  background-color: #93ffd0;
+  transform: scaleX(1);
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .nav__list {
+    flex-direction: row;
+  }
+}

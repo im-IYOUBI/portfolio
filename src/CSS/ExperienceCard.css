@@ -1,0 +1,61 @@
+:root {
+  --primary-bg: #130f2a;
+  --primary-border: #6751b9;
+  --highlight-bg: rgba(103, 81, 185, 0.5);
+  --text-color: #ffffff; /* Adjust for readability */
+}
+
+.work-experience-card {
+  background: var(--primary-bg);
+  border-radius: 0.65rem;
+  border: 1.5px solid var(--primary-border);
+  padding: 1.5rem;
+  margin: 0 1rem;
+  color: var(--text-color);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 350px; /* Ensures the card is at least this height */
+}
+
+
+.work-experience-card:hover {
+  transform: translateY(-10px); /* Card pops up */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+.work-experience-card h6 {
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin-bottom: 0.7rem;
+  color: var(--text-color);
+}
+
+.work-duration {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 400;
+  background: var(--highlight-bg);
+  border-radius: 0.3rem;
+  padding: 0.4rem 0.6rem;
+  margin-bottom: 1.3rem;
+  color: var(--text-color);
+}
+
+.work-experience-card ul li {
+  list-style: none;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.work-experience-card ul li::after {
+  content: "";
+  width: 0.9rem;
+  height: 0.9rem;
+  background-color: #675169;
+  border-radius: 0.5rem;
+  position: absolute;
+  left: -1.3rem;
+  top: 5px;
+}
