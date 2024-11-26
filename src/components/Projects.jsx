@@ -19,7 +19,7 @@ const Projects = () => {
         subtitle="Clothing E-commerce in React"
         description="Developed a Front-end clothing e-commerce platform with React.js, featuring dynamic filtering and secure payment integration."
         picture={p2}
-        github="#"
+        github="https://github.com/AMINE-d202/reactwear"
         
         tools={data.project1}
       />
@@ -28,7 +28,7 @@ const Projects = () => {
         subtitle="School Management System in Laravel"
         description="Created a Full-stack school management system in Laravel, handling student records, attendance, and communication between faculty and students."
         picture={p4}
-        github="#"
+        github="https://github.com/AMINE-d202/ofptsystem"
         
         tools={data.project2}
         isImageOnLeft={true}
@@ -36,7 +36,7 @@ const Projects = () => {
      
       <div className="projects-grid">
         <MiniProjectCard
-          github="#"
+          github="https://github.com/AMINE-d202/JSpj"
           picture={p3}
           title="Auto Parts E-commerce in JavaScript"
           description="Developed an e-commerce platform for auto parts using JavaScript, HTML, and CSS, with a secure authentication system and payment gateway integration."
@@ -46,7 +46,7 @@ const Projects = () => {
           ))}
         </MiniProjectCard>
         <MiniProjectCard
-          github="#"
+          github="https://github.com/AMINE-d202/resto"
           picture={p5}
           title="Restaurant Management System in Laravel"
           description="Built a restaurant management system with Laravel, focusing on order handling, reservations, and POS system integration."
@@ -56,7 +56,7 @@ const Projects = () => {
           ))}
         </MiniProjectCard>
         <MiniProjectCard
-          github="#"
+          github="https://github.com/AMINE-d202/LravelGym"
           
           picture={p1}
           title="Gym Management System in Laravel"
