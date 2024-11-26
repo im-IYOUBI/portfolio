@@ -19,8 +19,7 @@ const ProjectCard = ({
       <div className="project-card-content">
         <div className="project-card-links">
           {github && (
-            <a href={github}>
-              
+            <a href={github} target="_blank" rel="noopener noreferrer">
               <img
                 src={Github}
                 alt="GitHub"
@@ -30,8 +29,6 @@ const ProjectCard = ({
               />
             </a>
           )}
-
-         
         </div>
         <h1 className="project-title">{title}</h1>
         <h2 className="project-subtitle">{subtitle}</h2>
