@@ -4,10 +4,12 @@ import "../CSS/Navbar.css";
 
 const Navbar = () => {
   const [activeLink, setActiveLink] = useState('#Heroheader');
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // State for menu toggle
 
   // Handle link click to set active link
   const handleLinkClick = (href) => {
     setActiveLink(href);
+    setIsMenuOpen(false); // Close menu on link click
   };
 
   // Initialize smooth scroll on mount
@@ -23,7 +25,12 @@ const Navbar = () => {
   return (
     <nav id="navBar" className="nav">
       <div className="container">
-        <ul className="nav__list">
+        <div className="hamburger" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <ul className={`nav__list ${isMenuOpen ? 'active' : ''}`}>
           {/* Section Links */}
           <li className="nav__list-item">
             <a

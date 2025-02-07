@@ -1,18 +1,21 @@
 /* Navigation Styles */
 .nav {
-  padding-top: 1.5rem; /* Reduced padding */
-  padding-bottom: 1.5rem; /* Reduced padding */
+  padding-top: 1rem; /* Adjusted padding for mobile */
+  padding-bottom: 1rem; /* Adjusted padding for mobile */
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 100;
   backdrop-filter: blur(15px); /* Reduced blur intensity */
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space between items */
+  align-items: center; /* Center items vertically */
 }
 
 .nav__list {
   display: flex;
-  flex-direction: row; /* Always row layout for larger screens */
+  flex-direction: row; /* Default to row layout */
   justify-content: center;
   height: auto; /* Always visible */
   overflow-y: scroll;
@@ -31,7 +34,7 @@
 
 .nav__list-item {
   text-align: center;
-  margin-right: 1.5rem; /* Reduced space between items */
+  margin-right: 1.5rem; /* Space between items */
 }
 
 .nav__list-link {
@@ -40,7 +43,7 @@
   font-weight: 800;
   text-decoration: none;
   outline: none;
-  font-size: 1.8rem; /* Reduced font size for smaller icons */
+  font-size: 1.8rem; /* Font size for larger screens */
 }
 
 .nav__list-link i {
@@ -87,8 +90,50 @@
 }
 
 /* Responsive Design */
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .nav__list {
-    flex-direction: row;
+    flex-direction: column; /* Stack items vertically */
+    display: none; /* Hide by default */
+    position: absolute; /* Position absolutely */
+    top: 60px; /* Adjust based on navbar height */
+    left: 0;
+    right: 0;
+    background: rgba(18, 18, 18, 0.9); /* Background for dropdown */
+    z-index: 99; /* Ensure it appears above other content */
+  }
+
+  .nav__list.active {
+    display: flex; /* Show when active */
+  }
+
+  .nav__list-item {
+    margin-right: 0; /* Remove right margin for mobile */
+    margin-bottom: 1rem; /* Add bottom margin for spacing */
+  }
+
+  .nav__toggle {
+    display: block; /* Show hamburger icon */
+    cursor: pointer; /* Change cursor to pointer */
+  }
+}
+
+/* Hamburger Icon */
+.hamburger {
+  display: none; /* Hide by default */
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 30px;
+  height: 3px;
+  background: #688277;
+  margin: 4px 0; /* Space between lines */
+}
+
+/* Show hamburger icon on smaller screens */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex; /* Show hamburger icon */
   }
 }
