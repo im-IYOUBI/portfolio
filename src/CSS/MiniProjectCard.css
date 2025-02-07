@@ -1,9 +1,9 @@
 /* Container for the cards */
 .mini-project-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-  padding: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
 }
 
 /* Mini project card */
@@ -11,43 +11,74 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #121212;
-  padding: 1rem;
-  border-radius: 1rem;
-  box-shadow: 0 4px 8px rgba(32, 2, 61, 0.9);
-  transition: transform 0.3s ease-in-out;
+  background: rgba(18, 18, 18, 0.8);
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(32, 2, 61, 0.2);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  height: 400px; /* Standardized height */
+}
+
+.mini-project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, transparent, rgba(100, 252, 217, 0.05), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.mini-project-card:hover::before {
+  transform: translateX(100%);
 }
 
 .mini-project-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(32, 2, 61, 0.3);
+  border-color: rgba(100, 252, 217, 0.3);
 }
 
 /* Image styling */
 .mini-project-card-image {
   width: 100%;
-  border-radius: 0.75rem;
-  transition: transform 0.3s ease-in-out;
+  height: 200px; /* Fixed height for images */
+  border-radius: 1rem;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  object-fit: cover; /* Ensures images cover the area nicely */
 }
 
 .mini-project-card-image:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
+  box-shadow: 0 5px 15px rgba(100, 252, 217, 0.2);
 }
 
 /* Title */
 .mini-project-title {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: bold;
-  margin: 0.75rem 0 0.5rem;
-  color: #ffffff;
+  margin: 1rem 0;
+  background: linear-gradient(45deg, #ffffff, #64fcd9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
   text-align: center;
 }
 
 /* Description */
 .mini-project-description {
-  color: #cccccc;
-  font-size: 0.9rem;
-  margin-bottom: 0.75rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
   text-align: center;
+  line-height: 1.6;
 }
 
 /* Tools */
@@ -55,42 +86,93 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.5rem;
-  margin-bottom: 0.5rem;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
 }
 
 /* Links container */
 .mini-project-links {
-  display: flex;
-  justify-content: center;
-  gap: 0.75rem;
+  display: none; /* Hide by default */
+  position: absolute; /* Position it absolutely */
+  top: 1rem; /* Adjust as needed */
+  right: 1rem; /* Adjust as needed */
+  display: flex; /* Show as flex */
+  gap: 0.5rem; /* Space between icons */
+  background-color: rgba(0, 0, 0, 0.7); /* Background for visibility */
+  padding: 0.5rem; /* Padding around icons */
+  border-radius: 0.5rem; /* Rounded corners */
+}
+
+.mini-project-card:hover .mini-project-links {
+  display: flex; /* Show on hover */
 }
 
 .mini-project-links img {
-  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out; /* Smooth transition */
+  transition: all 0.3s ease-in-out;
+  opacity: 0.8;
 }
 
 .mini-project-links img:hover {
-  filter: brightness(3.3); /* Increase brightness by 30% for a whiter effect */
+  transform: translateY(-2px);
+  filter: brightness(1.5) drop-shadow(0 0 8px rgba(100, 252, 217, 0.5));
+  opacity: 1;
 }
 
 /* Icons */
+.github-icon {
+  transition: transform 0.2s ease-in-out;
+  filter: brightness(0) invert(1);
+}
+
+.github-icon:hover {
+  transform: scale(1.1);
+}
 
 /* Responsive Design */
 @media (min-width: 768px) {
   .mini-project-container {
-    gap: 1.5rem;
+    gap: 2.5rem;
   }
 
   .mini-project-card {
-    padding: 1.25rem;
+    padding: 1.8rem;
   }
 
   .mini-project-title {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
   }
 
   .mini-project-description {
     font-size: 1rem;
   }
+}
+
+@media (max-width: 768px) {
+  .mini-project-card {
+    height: 450px; /* Slightly taller on mobile */
+  }
+  
+  .mini-project-card-image {
+    height: 180px; /* Slightly smaller images on mobile */
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mini-project-card {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.mini-project-image-container {
+  position: relative;
+  width: 100%;
 }

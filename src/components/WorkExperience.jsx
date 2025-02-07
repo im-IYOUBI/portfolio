@@ -34,7 +34,7 @@ const slideLeft = () => {
 
   return (
     <section className="experience-container">
-      <h4>Experience & Education </h4>
+      <h4 id="workexperience" >Experience & Education </h4>
 
       <div className="experience-content">
         <div className="arrow-left" onClick={slideLeft}>

@@ -32,7 +32,8 @@ const HeroHeader = () => {
 
   return (
     <header id="heroHeader" className="hero-header">
-      <section className="header__container container">
+      <div  id="Heroheader">
+      <section  className="header__container container">
         <div className="header__left">
           <span className="header__sup-text">Hello There! I am</span>
           <h1 className="header__title">
@@ -55,6 +56,7 @@ const HeroHeader = () => {
         </div>
       </section>
       <span className="header__bg"></span>
+      </div>
     </header>
   );
 };

@@ -1,40 +1,194 @@
 .contact {
     display: flex;
-    flex-direction: column; /* Stack items vertically */
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     margin-top: 10rem;
-    align-items: center;
-    padding-bottom: 5rem;
-    text-align: center;
+    padding: 5rem 2rem;
+    background: linear-gradient(180deg, transparent, rgba(100, 252, 217, 0.05));
+    border-radius: 2rem;
 }
 
 .contact__title {
-    padding: 24px;
     font-size: 5rem;
     font-weight: bold;
-    color: #c2c2c2;
+    background: linear-gradient(45deg, #c2c2c2, #ffffff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
     text-align: center;
-    margin-bottom: 2rem; /* Optional: Add some margin below the title */
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.contact__title::after {
+    content: '';
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 4px;
+    background: linear-gradient(90deg, #64fcd9, transparent);
+    border-radius: 2px;
+}
+
+.contact__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 900px;
+}
+
+.contact__card {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+    transition: transform 0.3s ease, background 0.3s ease;
+    color: #fff;
+}
+
+.contact__card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.contact__icon {
+    font-size: 2rem;
+    margin-right: 1rem;
+    color: #64fcd9;
+}
+
+.contact__details h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.contact__details p {
+    margin: 0;
+    font-size: 1rem;
+    color: #ccc;
 }
 
 .contact__info {
-    font-size: 1.6rem;
-    line-height: 2;
-    color: white;
-    margin-bottom: 3rem;
+    flex: 1;
+    margin-right: 2rem;
+    font-size: 1.8rem;
+    line-height: 1.8;
+    color: #f0f0f0;
+    margin-bottom: 4rem;
+    text-align: center;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 3rem;
+    border-radius: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 .contact__info strong {
     font-weight: 700;
-    display: block; /* Separate lines for labels */
+    display: block;
+    color: #64fcd9;
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
 }
 
 .contact__info a {
     color: #64fcd9;
     text-decoration: none;
     font-weight: 600;
+    position: relative;
+    padding: 0.2rem 0;
+    transition: all 0.3s ease;
+}
+
+.contact__info a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #64fcd9;
+    transition: width 0.3s ease;
 }
 
 .contact__info a:hover {
-    text-decoration: underline;
+    color: #ffffff;
 }
+
+.contact__info a:hover::after {
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact {
+        padding: 3rem 1.5rem;
+    }
+
+    .contact__title {
+        font-size: 3.5rem;
+    }
+
+    .contact__grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Animation for elements */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contact__title,
+.contact__grid {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.contact__info {
+    animation-delay: 0.2s;
+}
+
+.contact__social {
+    flex: 1;
+}
+
+/* Animation for elements */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contact__title,
+.contact__grid {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.contact__info {
+    animation-delay: 0.2s;
+}
+
+.contact__social {
+    flex: 1;
+}
+  

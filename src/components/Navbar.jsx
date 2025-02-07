@@ -3,7 +3,7 @@ import SweetScroll from 'sweet-scroll';
 import "../CSS/Navbar.css";
 
 const Navbar = () => {
-  const [activeLink, setActiveLink] = useState('#facebook');
+  const [activeLink, setActiveLink] = useState('#Heroheader');
 
   // Handle link click to set active link
   const handleLinkClick = (href) => {
@@ -24,48 +24,50 @@ const Navbar = () => {
     <nav id="navBar" className="nav">
       <div className="container">
         <ul className="nav__list">
+          {/* Section Links */}
           <li className="nav__list-item">
             <a
-              className={`nav__list-link ${activeLink === '#facebook' ? 'active' : ''}`}
-              href="https://web.facebook.com/profile.php?id=100006149899414"
-              target="_blank" // Open in a new tab
-              rel="noopener noreferrer"
-              onClick={() => handleLinkClick('#facebook')}
+              className={`nav__list-link ${activeLink === '#Heroheader' ? 'active' : ''}`}
+              href="#Heroheader"
+              onClick={() => handleLinkClick('#Heroheader')}
             >
-              <i className="fab fa-facebook-f"></i>
+              Home
             </a>
           </li>
           <li className="nav__list-item">
             <a
-              className={`nav__list-link ${activeLink === '#github' ? 'active' : ''}`}
-              href="https://github.com/AMINE-d202"
-              target="_blank" // Open in a new tab
-              rel="noopener noreferrer"
-              onClick={() => handleLinkClick('#github')}
+              className={`nav__list-link ${activeLink === '#workexperience' ? 'active' : ''}`}
+              href="#workexperience"
+              onClick={() => handleLinkClick('#workexperience')}
             >
-              <i className="fab fa-github"></i> {/* GitHub icon */}
+              Experience
             </a>
           </li>
           <li className="nav__list-item">
             <a
-              className={`nav__list-link ${activeLink === '#instagram' ? 'active' : ''}`}
-              href="https://www.instagram.com/cosmic_iy/"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => handleLinkClick('#instagram')}
+              className={`nav__list-link ${activeLink === '#skills' ? 'active' : ''}`}
+              href="#skills"
+              onClick={() => handleLinkClick('#skills')}
             >
-              <i className="fab fa-instagram"></i>
+              Skills
             </a>
           </li>
           <li className="nav__list-item">
             <a
-              className={`nav__list-link ${activeLink === '#linkedin' ? 'active' : ''}`}
-              href="https://www.linkedin.com/in/amine-iyoubi-272b03286/"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => handleLinkClick('#linkedin')}
+              className={`nav__list-link ${activeLink === '#projects' ? 'active' : ''}`}
+              href="#projects"
+              onClick={() => handleLinkClick('#projects')}
             >
-              <i className="fab fa-linkedin-in"></i>
+              Projects
+            </a>
+          </li>
+          <li className="nav__list-item">
+            <a
+              className={`nav__list-link ${activeLink === '#contact' ? 'active' : ''}`}
+              href="#contact"
+              onClick={() => handleLinkClick('#contact')}
+            >
+              Contact
             </a>
           </li>
         </ul>
