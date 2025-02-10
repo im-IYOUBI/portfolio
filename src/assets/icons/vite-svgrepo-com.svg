@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="73" height="20" role="img" aria-label="Vite">
+    <title>Vite</title>
+    <!-- Background -->
+    <rect width="73" height="20" rx="3" fill="#646CFF"/>
+    
+    <!-- Vite Logo -->
+    <svg x="5" y="3" width="14" height="14" viewBox="0 0 256 256">
+        <path fill="#FFD740" d="M198.73 15.19a12 12 0 0 0-13.26 3.49L90.87 130.23a4 4 0 0 0-.87 3.06l9.32 82.54a12 12 0 0 0 21.7 5.74l16.94-21.79a4 4 0 0 1 6.35 0l16.94 21.79a12 12 0 0 0 21.7-5.74l9.32-82.54a4 4 0 0 0-.87-3.06L211 58a12 12 0 0 0-12.27-42.81Z"/>
+        <path fill="#7C4DFF" d="m200.09 15.42l-5.83 22.19a4 4 0 0 0 3.85 5.03h12.79a12 12 0 0 0 11.43-8.31a12 12 0 0 0-5.91-14.44l-1.24-.67a12 12 0 0 0-14.09 2.2Z"/>
+        <path fill="#FFF" d="M138.17 74.24a4 4 0 0 0-3.92-3.24H119.7a4 4 0 0 0-3.92 3.24L96 140a4 4 0 0 0 3.92 4.76h9.31a4 4 0 0 0 3.92-3.24l3.26-16h17.2l3.26 16a4 4 0 0 0 3.92 3.24h9.31a4 4 0 0 0 3.92-4.76Zm-19.64 41l6.08-29.78L130.63 115Z"/>
+    </svg>
+    
+    <!-- Text -->
+    <text x="25" y="15" font-family="Verdana, Geneva, DejaVu Sans, sans-serif" font-size="12" fill="white" font-weight="bold" text-anchor="start" text-rendering="geometricPrecision">Vite</text>
+</svg>

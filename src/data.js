@@ -18,6 +18,7 @@ import { default as Gitlab } from "./assets/icons/gitlab-svgrepo-com.svg";
 import { default as xampp } from "./assets/icons/xampp.svg";
 import { default as nodejs } from "./assets/icons/nodejs.svg";
 import { default as VScode } from "./assets/icons/vscode-fill-svgrepo-com.svg";
+import { default as vite } from "./assets/icons/vite-svgrepo-com.svg";
 
 const data = {
   languages: [
@@ -61,7 +62,7 @@ const data = {
     { id: 18, alt: "Laravel", img: Laravel },
     { id: 19, alt: "PHP", img: php },
     { id: 20, alt: "MySQL", img: mysql },
-    { id: 21, alt: "React.js", img: react },
+    { id: 21, alt: "vite", img: vite },
     { id: 22, alt: "JavaScript", img: js },
     { id: 23, alt: "HTML", img: html },
     { id: 24, alt: "CSS", img: css },
@@ -103,11 +104,28 @@ const data = {
     { id: 52, alt: "Bootstrap", img: bootstrap },
   ],
   card4: [
-    { id: 53, alt: "JavaScript", img: js },
-    { id: 54, alt: "PHP", img: php },
-    { id: 55, alt: "HTML5", img: html },
-    { id: 56, alt: "MySQL", img: mysql },
-    { id: 57, alt: "Bootstrap", img: bootstrap },
+    { id: 18, alt: "Laravel", img: Laravel },
+    { id: 19, alt: "PHP", img: php },
+    { id: 20, alt: "MySQL", img: mysql },
+    { id: 21, alt: "vite", img: vite },
+    { id: 22, alt: "JavaScript", img: js },
+    { id: 23, alt: "HTML", img: html },
+    { id: 24, alt: "CSS", img: css },
+    { id: 25, alt: "GitHub", img: Github },
+    { id: 26, alt: "Git", img: Git },
+    { id: 27, alt: "Figma", img: figma },
+  ],
+  card5: [
+    { id: 18, alt: "Laravel", img: Laravel },
+    { id: 19, alt: "PHP", img: php },
+    { id: 20, alt: "MySQL", img: mysql },
+    { id: 21, alt: "vite", img: vite },
+    { id: 22, alt: "JavaScript", img: js },
+    { id: 23, alt: "HTML", img: html },
+    { id: 24, alt: "CSS", img: css },
+    { id: 25, alt: "GitHub", img: Github },
+    { id: 26, alt: "Git", img: Git },
+    { id: 27, alt: "Figma", img: figma },
   ],
 };
 
