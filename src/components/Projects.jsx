@@ -29,7 +29,7 @@ const Projects = () => {
         subtitle="School Management System in Laravel"
         description="Created a Full-stack school management system in Laravel, handling student records, attendance, and communication between faculty and students."
         picture={p6}
-        github="https://github.com/AMINE-d202/ofptsystem"
+        github="https://github.com/AMINE-d202/Scholify"
         
         tools={data.project2}
         isImageOnLeft={true}
